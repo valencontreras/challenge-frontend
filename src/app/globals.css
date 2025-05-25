@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f4fa;
+  --primary: #262261;
+  --secondary: #f28627;
+  --yellow: #ffc529;
+  --red: #e31746;
+  --green-10: #41a52d;
+  --green-20: #63ae52;
+  --green-30: #03c43e;
+  --gray-10: #d9d9d9;
+  --gray-20: #d5e3d6;
+  --gray-30: #707070;
+  --typography-primary: #1f2026;
+  --typography-secondary: #554f4f;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-yellow: var(--yellow);
+  --color-red: var(--red);
+  --color-green-10: var(--green-10);
+  --color-gray-10: var(--gray-10);
+  --color-gray-20: var(--gray-20);
+  --color-gray-30: var(--gray-30);
+  --color-typography-primary: var(--typography-primary);
+  --color-typography-secondary: var(--typography-secondary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.clip-diagonal {
+  background-color: var(--primary);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+}

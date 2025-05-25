@@ -1,0 +1,103 @@
+.svg {
+  path {
+    stroke: currentColor;
+    transition: all 0.3s ease;
+  }
+  line {
+    stroke: currentColor;
+    transition: all 0.3s ease;
+  }
+  rect {
+    stroke: currentColor;
+    transition: all 0.3s ease;
+  }
+  circle {
+    stroke: currentColor;
+    transition: all 0.3s ease;
+  }
+}
+
+// Normal fill
+.svgFillPath {
+  path {
+    fill: currentColor;
+    transition: all 0.3s ease;
+  }
+}
+.svgFillCircle {
+  circle {
+    fill: currentColor;
+    transition: all 0.3s ease;
+  }
+}
+.svgFillLine {
+  line {
+    fill: currentColor;
+    transition: all 0.3s ease;
+  }
+}
+.svgFillRect {
+  rect {
+    fill: currentColor;
+    transition: all 0.3s ease;
+  }
+}
+
+// Fill Gray
+.svgFillGray {
+  rect {
+    fill: #b4b4b4;
+    transition: all 0.3s ease;
+  }
+}
+.svgFillGrayCircle {
+  circle {
+    fill: #b4b4b4;
+    transition: all 0.3s ease;
+  }
+}
+.svgFillGrayPath {
+  path {
+    fill: #b4b4b4;
+    transition: all 0.3s ease;
+  }
+}
+.svgFillGrayLine {
+  line {
+    fill: #b4b4b4;
+    transition: all 0.3s ease;
+  }
+}
+
+// Fill white
+.svgFillWhitePath {
+  path {
+    fill: #fff;
+    transition: all 0.3s ease;
+  }
+}
+.svgFillWhiteRect {
+  rect {
+    fill: #fff;
+    transition: all 0.3s ease;
+  }
+}
+.svgFillWhiteCircle {
+  circle {
+    fill: #fff;
+    transition: all 0.3s ease;
+  }
+}
+.svgFillWhiteLine {
+  line {
+    fill: #fff;
+    transition: all 0.3s ease;
+  }
+}
+.svgFillWhitePathStroke {
+  path {
+    fill: #fff;
+    stroke: #fff;
+    transition: all 0.3s ease;
+  }
+}
