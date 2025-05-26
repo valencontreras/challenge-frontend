@@ -11,6 +11,15 @@ import {
   WaveProgressionData,
 } from "interfaces";
 
+/**
+ * The `useGetData` function in TypeScript React returns a data object containing various information
+ * related to a dashboard.
+ * @returns The `useGetData` function is returning an object with a property `data` which contains
+ * various data related to a dashboard. This data includes information about the user (`username`),
+ * apprenticeship information, contact data for sponsor and employer, progress metrics for skills and
+ * competencies, OJT data, RTI data, wave progression data, competencies progress data, journeyworkers
+ * data, skills progress data,
+ */
 export const useGetData = (): { data: DashboardData } => {
   const username = "Kayla";
 

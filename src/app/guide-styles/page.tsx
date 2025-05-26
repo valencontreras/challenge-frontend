@@ -2,6 +2,13 @@ import clsx from "clsx";
 import { Typography, Button, Avatar } from "components";
 import Icons from "const/icons";
 
+/**
+ * The GuideStyles function in TypeScript React renders a component with various sections like
+ * Typography, Buttons with different decorations, sizes, and icons, and Avatars.
+ * @returns The `GuideStyles` component is returning a JSX structure that includes various sections for
+ * typography, buttons, disabled buttons, button sizes, buttons with icons, and avatars.
+ * In the style guide, you can find the most common project components with their properties.
+ */
 const GuideStyles = () => {
   return (
     <>

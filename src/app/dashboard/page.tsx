@@ -11,7 +11,7 @@ import Icons from "const/icons";
 import { useGetData } from "hooks/useGetData";
 
 export default function Dashboard() {
-  const { data } = useGetData();
+  const { data } = useGetData(); // Assuming useGetData fetches the necessary data for the dashboard
   return (
     <div className="relative w-full">
       {/* diagonal background  */}

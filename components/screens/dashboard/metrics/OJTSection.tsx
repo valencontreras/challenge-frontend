@@ -1,4 +1,4 @@
-import { StarLabel, Lengend, Card, PieChartComponent } from "components";
+import { StarLabel, Legend, Card, PieChartComponent } from "components";
 import { OJTData } from "interfaces";
 
 export const OJTSection = ({ data }: { data: OJTData }) => {
@@ -23,7 +23,7 @@ export const OJTSection = ({ data }: { data: OJTData }) => {
     <Card title="OJT" className="relative">
       <div className="flex flex-col gap-y-4 h-5/6 justify-between">
         <div className="grid grid-cols-2 gap-1.5">
-          <Lengend metricsArray={lengend} />
+          <Legend metricsArray={lengend} />
           <div className="absolute top-7 right-0">
             <PieChartComponent
               id="OJT"

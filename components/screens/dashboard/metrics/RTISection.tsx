@@ -1,4 +1,4 @@
-import { Lengend, Card, StarLabel, PieChartComponent } from "components";
+import { Legend, Card, StarLabel, PieChartComponent } from "components";
 import { RTIData } from "interfaces";
 
 export const RTISection = ({ data }: { data: RTIData }) => {
@@ -18,7 +18,7 @@ export const RTISection = ({ data }: { data: RTIData }) => {
     <Card title="RTI" className="relative">
       <div className="flex flex-col gap-y-4 h-5/6 justify-between">
         <div className="grid grid-cols-2 gap-1.5">
-          <Lengend metricsArray={lengend} />
+          <Legend metricsArray={lengend} />
           <div className="absolute top-7 right-0">
             <PieChartComponent
               id="RTI"

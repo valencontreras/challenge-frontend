@@ -10,6 +10,14 @@ interface CardColorsProps {
   iconSize: string;
   backgroundColor: string;
 }
+/**
+ * The `CardColors` component in TypeScript React renders a card with specified props like total,
+ * label, icon, and background color.
+ * @returns The `CardColors` component is being returned. It is a functional component that takes in
+ * props `missing`, `total`, `label`, `icon`, `iconSize`, and `backgroundColor`. Inside the component,
+ * it renders a styled `div` element containing text elements and an icon. The background color of the
+ * `div` is set based on the `backgroundColor` prop passed to the component.
+ */
 export const CardColors: React.FC<CardColorsProps> = ({
   missing,
   total,

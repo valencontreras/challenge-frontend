@@ -1,3 +1,13 @@
+/**
+ * The code defines a React functional component `DonutChart` that renders a donut chart based on
+ * provided metrics and styling properties.
+ * @property {number} percentage - The `percentage` property in the `Metric` type represents the
+ * percentage value of a particular metric in the donut chart. It indicates what portion of the donut
+ * circle should be filled with a specific color corresponding to that metric.
+ * @property {string} color - The `color` property in the `Metric` type represents the color of a
+ * specific segment in the donut chart. It is a string value that defines the color to be used for that
+ * segment in the chart.
+ */
 import * as React from "react";
 
 export type Metric = {
