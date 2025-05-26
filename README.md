@@ -1,4 +1,4 @@
-# Challenge Frontend
+# Frontend Challenge
 
 This is the frontend for a challenge, built using Next.js. The project follows a modular architecture with TypeScript, emphasizing maintainability, scalability, and performance.
 
