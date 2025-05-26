@@ -1,24 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Challenge Frontend
+
+This is the frontend for a challenge, built using Next.js. The project follows a modular architecture with TypeScript, emphasizing maintainability, scalability, and performance.
+
+## Tech Stack
+
+- Next.js — React framework for production-grade apps
+- Tailwind CSS — Utility-first CSS framework for rapid UI development
+- TypeScript — Static typing for JavaScript
+- Modular folder structure (e.g., components, hooks, lib)
+
+## Project Structure
+
+```bash
+src/
+├── components/ # Reusable UI components
+├── consts/ # Global constants
+├── hooks/ # Custom React hooks
+├── interfaces/ # TypeScript interfaces & types
+├── lib/ # Utilities and helpers
+├── src/app/ # Next.js pages/routes
+├── public/ # Static assets
+```
 
 ## Getting Started
 
-First, run the development server:
+### a. Clone the Repository
+
+Start by cloning the template repository from GitHub with the following command:
+
+```bash
+git clone https://github.com/valencontreras/challenge-frontend.git
+```
+
+Once the repository is cloned, navigate to the template directory:
+
+```bash
+cd challenge-frontend
+```
+
+### b. Install Dependencies
+
+Make sure that **Node.js** and **NPM** are installed on your system. Once verified, install the project dependencies:
+
+```bash
+npm install
+```
+
+### d. Start the Development Server
+
+To start the development server, run:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will start the project locally in development mode at [http://localhost:3000](http://localhost:3000).  
+You can access the project by entering that address in your web browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Guide Styles
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`/guide-styles`
+
+In the style guide, you can find the most common project components with their properties.
 
 ## Learn More
 
@@ -26,11 +69,3 @@ To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
