@@ -5,8 +5,10 @@ import { MetricItem } from "interfaces";
 
 export const CompetenciesProgress = ({ data }: { data: MetricItem[] }) => {
   return (
-    <Card className="w-full lg:w-[40%]" title="COMPETENCIES PROGRESS">
-      <ProgressCard header={["COMPETENCIES", "PROGRESS"]} data={data} />
+    <Card className="w-full xl:w-[40%]" title="COMPETENCIES PROGRESS">
+      <div className="sm:max-h-80 xl:max-h-fit overflow-y-scroll pr-1">
+        <ProgressCard header={["COMPETENCIES", "PROGRESS"]} data={data} />
+      </div>
     </Card>
   );
 };

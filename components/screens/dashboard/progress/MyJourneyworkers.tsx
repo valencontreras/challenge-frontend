@@ -3,7 +3,7 @@ import { Journeyworker } from "interfaces";
 
 export const MyJourneyworkers = ({ data }: { data: Journeyworker[] }) => {
   return (
-    <Card className="w-full lg:w-[25%]" title="MY JOURNEYWORKERS">
+    <Card className="w-full xl:w-[25%]" title="MY JOURNEYWORKERS">
       <div className="lg:max-h-80 overflow-y-scroll pr-1">
         <ul className="flex flex-col">
           {data.map((journeyworker, index) => (

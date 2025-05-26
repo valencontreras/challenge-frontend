@@ -93,6 +93,18 @@ export const useGetData = (): { data: DashboardData } => {
         x: 50,
         y: 60,
       },
+      {
+        x: 70,
+        y: 70,
+      },
+      {
+        x: 80,
+        y: 50,
+      },
+      {
+        x: 90,
+        y: 80,
+      },
     ],
   };
 

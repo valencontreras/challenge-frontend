@@ -4,6 +4,7 @@
  * attributes (path, circle, etc)
  */
 enum Icons {
+  bars3 = "/icons/svg/bars-3.svg",
   bell = "/icons/svg/bell.svg",
   brain = "/icons/svg/brain.svg",
   calendar = "/icons/svg/calendar.svg",
@@ -15,6 +16,7 @@ enum Icons {
   star = "/icons/svg/star.svg",
   starFilled = "/icons/svg/star-filled.svg",
   trophy = "/icons/svg/trophy.svg",
+  x = "/icons/svg/xicons.svg",
 
   // Icons png
   attLogo = "/icons/png/AT&T.png",

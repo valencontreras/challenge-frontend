@@ -5,8 +5,8 @@ import { DashboardData } from "interfaces";
 
 export const MetricsSection = ({ data }: { data: DashboardData }) => {
   return (
-    <div className="flex flex-col md:flex-row gap-6 mt-10 lg:mt-[76px] w-full">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-full">
+    <div className="flex flex-col xl:flex-row gap-6 mt-10 xl:mt-[76px] w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-full w-full xl:max-w-[55%]">
         <CardColors
           backgroundColor="#F28627"
           icon={Icons.seedling}
@@ -26,7 +26,7 @@ export const MetricsSection = ({ data }: { data: DashboardData }) => {
         <OJTSection data={data.ojtData} />
         <RTISection data={data.rtiData} />
       </div>
-      <div className="w-full lg:w-[50%]">
+      <div className="w-full xl:w-[50%]">
         <WaveProgressionSection data={data.waveProgressionData} />
       </div>
     </div>

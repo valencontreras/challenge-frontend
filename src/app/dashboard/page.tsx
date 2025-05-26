@@ -25,7 +25,7 @@ export default function Dashboard() {
 
       <div className="relative z-10 pt-[50px] lg:pt-[100px]">
         <div className="px-8 lg:px-10 2xl:px-20">
-          <div className="flex flex-col lg:flex-row justify-between gap-2">
+          <div className="flex flex-col xl:flex-row justify-between gap-2">
             <div>
               <Typography type="title" className="text-white">
                 Welcome, {data.username}

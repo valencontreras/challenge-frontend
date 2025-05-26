@@ -21,7 +21,7 @@ export const WaveProgressionSection = ({
 
 const CurrentPayLabel = ({ value }: { value: number }) => {
   return (
-    <div className="absolute top-16 lg:top-6 right-10">
+    <div className="absolute top-16 2xl:top-6 right-10">
       <div className="flex items-center justify-between border border-primary rounded-[6px] px-2 py-1.5 w-64">
         <Typography type="body-1" className="text-primary font-bold">
           Current Pay

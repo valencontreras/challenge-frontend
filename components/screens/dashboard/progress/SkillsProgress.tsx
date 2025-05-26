@@ -4,12 +4,12 @@ import { MetricItem } from "interfaces";
 
 export const SkillsProgress = ({ data }: { data: MetricItem[] }) => {
   return (
-    <Card className="w-full lg:w-[35%]" title="SKILLS PROGRESS">
+    <Card className="w-full xl:w-[35%]" title="SKILLS PROGRESS">
       <ProgressCard
         header={["SKILLS", "PROGRESS"]}
         data={data}
         highColor="#03C43E"
-      />{" "}
+      />
     </Card>
   );
 };

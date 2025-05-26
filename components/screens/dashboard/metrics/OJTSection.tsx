@@ -34,13 +34,15 @@ export const OJTSection = ({ data }: { data: OJTData }) => {
         </div>
         <div className="flex items-center justify-between gap-x-5 2xl:gap-x-10">
           <StarLabel
-            title={`${data.hours_completed} hours`}
+            title={`${data.hours_completed}`}
+            titleComplement="hours"
             subtitle="Completed"
             starFilled={true}
           />
           <span className="w-[0.5px] h-[33px] bg-gray-80  shrink-0" />
           <StarLabel
-            title={`${data.hours_missing} hours`}
+            title={`${data.hours_missing}`}
+            titleComplement="hours"
             subtitle="Missing"
             starFilled={false}
           />

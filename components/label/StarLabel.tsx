@@ -4,6 +4,7 @@ import * as React from "react";
 
 interface StarLabelProps {
   title: string;
+  titleComplement?: string;
   subtitle: string;
   starFilled: boolean;
 }
@@ -19,6 +20,7 @@ interface StarLabelProps {
  */
 export const StarLabel: React.FC<StarLabelProps> = ({
   starFilled,
+  titleComplement,
   subtitle,
   title,
 }) => {
@@ -30,12 +32,9 @@ export const StarLabel: React.FC<StarLabelProps> = ({
       />
       <div>
         <Typography type="body-2" className="text-primary font-bold">
-          {title}
+          {title} <span className="italic">{titleComplement}</span>
         </Typography>
-        <Typography
-          type="body-2"
-          className="text-primary 2xl:whitespace-nowrap"
-        >
+        <Typography type="body-2" className="text-primary">
           {subtitle}
         </Typography>
       </div>

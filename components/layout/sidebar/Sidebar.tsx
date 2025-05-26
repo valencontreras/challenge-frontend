@@ -30,21 +30,26 @@ export const Sidebar = () => {
 
 interface SidebarItemProps {
   children: React.ReactNode;
-  label: string;
+  label?: string;
 }
 
-const SidebarItem: React.FC<SidebarItemProps> = ({ children, label }) => {
+export const SidebarItem: React.FC<SidebarItemProps> = ({
+  children,
+  label,
+}) => {
   return (
     <div className="flex flex-col items-center justify-center hover:opacity-60 cursor-pointer hover:transition-opacity hover:duration-300">
       {children}
-      <Typography type="custom-p" className="text-[15px] text-gray-30 mt-2">
-        {label}
-      </Typography>
+      {label && (
+        <Typography type="custom-p" className="text-[15px] text-gray-30 mt-2">
+          {label}
+        </Typography>
+      )}
     </div>
   );
 };
 
-const NotificationOption = () => {
+export const NotificationOption = () => {
   return (
     <div className="bg-secondary rounded-full size-[42px] py-2 px-1.5 relative">
       <Icon src={Icons.bell} />
