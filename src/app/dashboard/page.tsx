@@ -11,7 +11,7 @@ import Icons from "const/icons";
 import { useGetData } from "hooks/useGetData";
 
 export default function Dashboard() {
-  const { data } = useGetData(); // Assuming useGetData fetches the necessary data for the dashboard
+  const { data } = useGetData(); // Using a hook to get the data, but then when the data is getted from an endpoint, it will be replaced
   return (
     <div className="relative w-full">
       {/* diagonal background  */}
@@ -26,6 +26,7 @@ export default function Dashboard() {
       <div className="relative z-10 pt-[50px] lg:pt-[100px]">
         <div className="px-8 lg:px-10 2xl:px-20">
           <div className="flex flex-col xl:flex-row justify-between gap-2">
+            {/* Header */}
             <div>
               <Typography type="title" className="text-white">
                 Welcome, {data.username}
