@@ -54,20 +54,18 @@ const ButtonContent: React.FC<
 
         // fill
         {
-          "text-white bg-blue border-blue": decoration === "fill",
+          "text-white bg-secondary border-secondary": decoration === "fill",
         },
         {
-          "hover:text-blue hover:border-blue hover:bg-transparent":
-            decoration === "fill" && !disabled,
+          "hover:opacity-60": decoration === "fill" && !disabled,
         },
 
         // not fill white
         {
-          "text-blue border-blue": decoration === "not-fill",
+          "text-white border-white": decoration === "not-fill",
         },
         {
-          "hover:bg-blue hover:text-white hover:border-blue":
-            decoration === "not-fill" && !disabled,
+          "hover:opacity-60": decoration === "not-fill" && !disabled,
         },
 
         // not fill primary
@@ -81,28 +79,28 @@ const ButtonContent: React.FC<
 
         // none
         {
-          "text-gray-800 font-medium hover:bg-dark-10": !decoration,
+          "text-black font-medium hover:bg-gray-10": !decoration,
         },
 
         // global
-        "group flex items-center justify-center border rounded-lg px-4 py-2",
+        "group flex items-center justify-center border rounded px-4 py-2",
         "outline-none transition-colors duration-200",
-        "focus:outline-none disabled:cursor-not-allowed disabled:opacity-30",
+        "focus:outline-none cursor-pointer disabled:cursor-not-allowed disabled:opacity-30",
         className
       )}
     >
       {label ? (
         <div className="flex items-center justify-end">
           {icon && iconLeft && (
-            <span className="w-6 h-6 mr-2">
-              <Icon src={icon} />
+            <span className="mr-2">
+              <Icon src={icon} className="size-6" />
             </span>
           )}
           <p className="text-[17px]">{label}</p>{" "}
           {loading && <Spinner className="mx-2" />}
           {icon && iconRight && (
-            <span className="w-6 h-6 ml-2">
-              <Icon src={icon} />
+            <span className="ml-2">
+              <Icon src={icon} className="size-6" />
             </span>
           )}
         </div>

@@ -1,18 +1,19 @@
 "use client";
 
 import * as React from "react";
-import { ROUTES } from "../../../lib";
+import { ROUTES } from "lib";
 import Link from "next/link";
-import { Typography } from "../../common/typography";
+import { Typography } from "components";
 import clsx from "clsx";
 import Image from "next/image";
-import Icons from "../../../const/icons";
+import Icons from "const/icons";
 import { usePathname } from "next/navigation";
+import { Navigation } from "interfaces";
 
 export const Navbar = () => {
   const pathname = usePathname();
 
-  const sections = [
+  const sections: Navigation[] = [
     { name: "Dashboard", href: ROUTES.DASHBOARD },
     { name: "OJT", href: ROUTES.OJT },
     { name: "RTI", href: ROUTES.RTI },
@@ -24,25 +25,29 @@ export const Navbar = () => {
   };
 
   return (
-    <header className="bg-white py-[27px] px-10 flex items-center justify-between gap-10 fixed top-0 z-10 w-full pl-[120px]">
-      <nav className="flex items-center w-full">
-        {sections.map((section) => (
-          <Link href={section.href} key={section.name} className="px-20">
-            <Typography
-              type="body-1"
-              className={clsx(
-                "font-bold",
-                getIsCurrentPath(section.href)
-                  ? "text-secondary"
-                  : "text-typography-primary"
-              )}
-            >
-              {section.name}
-            </Typography>
-          </Link>
-        ))}
-      </nav>
-      <Image alt="at&t logo" src={Icons.attLogo} width={114} height={47} />
+    <header className="bg-white w-full">
+      <div className="flex items-center w-full justify-between py-[27px] px-10">
+        <nav className="flex items-center w-full gap-20">
+          {sections.map((section) => (
+            <Link href={section.href} key={section.name}>
+              <Typography
+                type="body-1"
+                className={clsx(
+                  "font-extrabold hover:opacity-60",
+                  getIsCurrentPath(section.href)
+                    ? "text-secondary"
+                    : "text-typography-primary"
+                )}
+              >
+                {section.name}
+              </Typography>
+            </Link>
+          ))}
+        </nav>
+        <div>
+          <Image alt="at&t logo" src={Icons.attLogo} width={114} height={47} />
+        </div>
+      </div>
     </header>
   );
 };

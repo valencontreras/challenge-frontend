@@ -1,15 +1,16 @@
 import Image from "next/image";
 import * as React from "react";
-import Logos from "../../../const/logos";
-import { Typography } from "../../common/typography";
-import { Avatar } from "../../common/avatar";
-import Icons from "../../../const/icons";
-import { Icon } from "../../common/icon";
+import { Avatar, Icon, Typography } from "components/common";
+import Icons from "const/icons";
+import Logos from "const/logos";
 
 export const Sidebar = () => {
   return (
-    <aside className="fixed h-screen w-[138px] bg-white border border-gray-20 flex flex-col justify-start z-20 pt-12">
-      <button type="button">
+    <aside className="h-screen w-[138px] bg-white border border-gray-20 flex flex-col justify-start z-20 pt-12">
+      <button
+        type="button"
+        className="cursor-pointer  hover:opacity-60 hover:transition-opacity hover:duration-300"
+      >
         <SidebarItem label="Logout">
           <Image alt="logo" src={Logos.logo} width={56} height={58} />
         </SidebarItem>
@@ -17,7 +18,7 @@ export const Sidebar = () => {
 
       <div className="space-y-20 mt-[150px]">
         <SidebarItem label="Apprentice">
-          <Avatar photoUrl={Icons.avatar} size="medium" />
+          <Avatar withRing photoUrl={Icons.avatar} size="medium" />
         </SidebarItem>
         <SidebarItem label="Notifications">
           <NotificationOption />
@@ -34,7 +35,7 @@ interface SidebarItemProps {
 
 const SidebarItem: React.FC<SidebarItemProps> = ({ children, label }) => {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center hover:opacity-60 cursor-pointer hover:transition-opacity hover:duration-300">
       {children}
       <Typography type="custom-p" className="text-[15px] text-gray-30 mt-2">
         {label}

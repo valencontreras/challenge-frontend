@@ -18,9 +18,7 @@ export interface TypographyProps {
     | "subtitle-3"
     | "body-1"
     | "body-2"
-    | "caption-1"
-    | "caption-2"
-    | "caption-3"
+    | "caption"
     | "overline";
 
   text?: string;
@@ -82,86 +80,42 @@ export const Typography: React.FC<TypographyProps> = ({
 
   if (type === "subtitle-1")
     return (
-      <h2
-        id={id}
-        className={clsx("text-gray-800 text-lg xl:text-[22px]", className)}
-      >
+      <h2 id={id} className={clsx("text-lg xl:text-[22px]", className)}>
         {children || text}
       </h2>
     );
 
   if (type === "subtitle-2")
     return (
-      <h2
-        id={id}
-        className={clsx("text-gray-800 text-base xl:text-xl", className)}
-      >
+      <h2 id={id} className={clsx("text-base xl:text-xl", className)}>
         {children || text}
       </h2>
     );
 
   if (type === "subtitle-3")
     return (
-      <h3
-        id={id}
-        className={clsx("text-gray-800 text-sm xl:text-lg", className)}
-      >
+      <h3 id={id} className={clsx("text-sm xl:text-lg", className)}>
         {children || text}
       </h3>
     );
 
   if (type === "body-1")
     return (
-      <h2 id={id} className={clsx("text-gray-800 text-base", className)}>
+      <h2 id={id} className={clsx("text-base", className)}>
         {children || text}
       </h2>
     );
 
   if (type === "body-2")
     return (
-      <h2
-        id={id}
-        className={clsx("text-gray-800 font-normal text-xs", className)}
-      >
+      <h2 id={id} className={clsx("text-sm", className)}>
         {children || text}
       </h2>
     );
 
-  if (type === "caption-1")
+  if (type === "caption")
     return (
-      <h2
-        id={id}
-        className={clsx(
-          "text-gray-800 font-light text-[10px] leading-[14px]",
-          className
-        )}
-      >
-        {children || text}
-      </h2>
-    );
-
-  if (type === "caption-2")
-    return (
-      <h2
-        id={id}
-        className={clsx(
-          "text-gray-800 font-medium text-[10px] leading-[14px]",
-          className
-        )}
-      >
-        {children || text}
-      </h2>
-    );
-
-  if (type === "caption-3")
-    return (
-      <h2
-        id={id}
-        className={clsx(
-          "text-gray-800 font-extrabold text-[10px] leading-[14px]",
-          className
-        )}
-      >
+      <h2 id={id} className={clsx("text-[10px]", className)}>
         {children || text}
       </h2>
     );
@@ -170,10 +124,7 @@ export const Typography: React.FC<TypographyProps> = ({
     return (
       <h2
         id={id}
-        className={clsx(
-          "text-gray-800 font-medium text-[8px] leading-[10px]",
-          className
-        )}
+        className={clsx("font-medium text-[8px] leading-[10px]", className)}
       >
         {children || text}
       </h2>

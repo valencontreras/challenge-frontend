@@ -1,3 +1,4 @@
-export * from "./CardsColors";
-export * from "./MetricsSection";
-export * from "./ProgressSection";
+export * from "./apprenticeship";
+export * from "./courses-status";
+export * from "./metrics";
+export * from "./progress";

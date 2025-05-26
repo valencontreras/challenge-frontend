@@ -10,6 +10,7 @@ enum Icons {
   card = "/icons/svg/card.svg",
   coins = "/icons/svg/coins.svg",
   help = "/icons/svg/help.svg",
+  plus = "/icons/svg/plus.svg",
   seedling = "/icons/svg/seedling.svg",
   star = "/icons/svg/star.svg",
   starFilled = "/icons/svg/starFilled.svg",

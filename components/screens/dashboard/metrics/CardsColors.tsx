@@ -1,7 +1,6 @@
 import * as React from "react";
-import { Typography } from "../../common/typography";
 import clsx from "clsx";
-import { Icon } from "../../common/icon";
+import { Icon, Typography } from "components";
 
 interface CardColorsProps {
   total: number;
@@ -22,9 +21,9 @@ export const CardColors: React.FC<CardColorsProps> = ({
   return (
     <div
       className={clsx(
-        "flex justify-between px-7 py-8 border border-gray-10 rounded-[9px]",
-        `bg-${backgroundColor}`
+        "flex justify-between px-7 py-8 border border-gray-10 rounded-[9px]"
       )}
+      style={{ backgroundColor: backgroundColor }}
     >
       <div>
         <Typography type="title" className="text-white">

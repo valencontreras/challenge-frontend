@@ -1,6 +1,5 @@
 import * as React from "react";
-import { Navbar } from "../navbar";
-import { Sidebar } from "../sidebar";
+import { Navbar, Sidebar } from "../";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -8,14 +7,14 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <main className="bg-background min-h-screen flex flex-col">
-      <Navbar />
-      <div className="flex">
-        <Sidebar />
-        <div className="mt-24 ml-[138px] w-full h-full min-h-screen px-20">
-          {children}
+    <div className="bg-background flex h-screen">
+      <Sidebar />
+      <div className="flex flex-col w-full relative overflow-x-hidden">
+        <Navbar />
+        <div className="w-full overflow-y-auto pb-14">
+          <main>{children}</main>
         </div>
       </div>
-    </main>
+    </div>
   );
 };
