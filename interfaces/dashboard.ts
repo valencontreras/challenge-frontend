@@ -13,7 +13,6 @@ export interface ApprenticeshipInformation {
 
 export interface ContactData {
   name?: string;
-  sponsor?: string;
   office: string;
   email: string;
 }
@@ -27,7 +26,7 @@ export interface OJTData {
   review: number;
   pending: number;
   approved: number;
-  total: number;
+  total: string;
   hours_completed: number;
   hours_missing: number;
 }
@@ -35,7 +34,7 @@ export interface OJTData {
 export interface RTIData {
   pending: number;
   approved: number;
-  total: number;
+  total: string;
   completed_courses: number;
   missing_courses: number;
 }
@@ -63,7 +62,8 @@ export interface CourseStatus {
   end_date: string;
 }
 
-export interface ApprenticeshipData {
+export interface DashboardData {
+  username: string;
   apprenticeshipInformation: ApprenticeshipInformation;
   sponsorContactData: ContactData;
   employerContactData: ContactData;

@@ -1,16 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import * as React from "react";
 import clsx from "clsx";
-import { Card } from "components/card";
-import { Icon, Typography } from "components/common";
+import { Card, Icon, Typography } from "components";
 import Icons from "const/icons";
+import {
+  ApprenticeshipInformation,
+  ContactData,
+  DashboardData,
+} from "interfaces";
 
-export const ApprenticeshipInfoCard = () => {
-  const [index, setIndex] = useState(0);
-  const [fade, setFade] = useState(false);
+export const ApprenticeshipInfoCard = ({ data }: { data: DashboardData }) => {
+  const [index, setIndex] = React.useState(0);
+  const [fade, setFade] = React.useState(false);
 
-  const cardData = [0, 0, 0];
+  const cardData = [
+    data.apprenticeshipInformation,
+    data.sponsorContactData,
+    data.employerContactData,
+  ];
 
   const handleNext = () => {
     setFade(true);
@@ -30,7 +38,7 @@ export const ApprenticeshipInfoCard = () => {
     <Card
       title={title[index]}
       onClick={handleNext}
-      className="relative !py-5 cursor-pointer min-w-lg 2xl:min-w-xl max-w-xl max-h-56 shadow-lg transition-all duration-300 ease-in-out"
+      className="relative !py-5 cursor-pointer min-w-lg 2xl:min-w-xl max-w-xl h-[235px] shadow-lg transition-all duration-300 ease-in-out"
     >
       <Icon
         src={Icons.card}
@@ -40,15 +48,28 @@ export const ApprenticeshipInfoCard = () => {
         className={clsx("transition-opacity duration-300", fade && "opacity-0")}
       >
         {index === 0 ? (
-          <ApprenticesCard />
+          <ApprenticesCard
+            company={data.apprenticeshipInformation.company}
+            onet={data.apprenticeshipInformation.onet}
+            program={data.apprenticeshipInformation.program}
+            rapids={data.apprenticeshipInformation.rapids}
+          />
+        ) : index === 1 ? (
+          <ContactCard
+            type="Sponsor"
+            email={data.sponsorContactData.email}
+            office={data.sponsorContactData.office}
+            name={data.sponsorContactData.name}
+          />
         ) : (
           <ContactCard
-            type={index === 1 ? "Name" : "Sponsor"}
-            email="test"
-            office="test"
+            type="Name"
+            email={data.employerContactData.email}
+            office={data.employerContactData.office}
+            name={data.employerContactData.name}
           />
         )}
-        <div className="flex justify-center gap-5 mt-5">
+        <div className="flex justify-center gap-5 absolute bottom-5 right-[45%]">
           {cardData.map((_, i) => (
             <div
               key={i}
@@ -63,7 +84,12 @@ export const ApprenticeshipInfoCard = () => {
   );
 };
 
-const ApprenticesCard = () => {
+const ApprenticesCard: React.FC<ApprenticeshipInformation> = ({
+  company,
+  onet,
+  program,
+  rapids,
+}) => {
   return (
     <>
       <div className="flex justify-between items-start mb-2">
@@ -78,7 +104,7 @@ const ApprenticesCard = () => {
             type="body-2"
             className="text-typography-secondary font-semibold"
           >
-            test
+            {program}
           </Typography>
         </div>
       </div>
@@ -94,7 +120,7 @@ const ApprenticesCard = () => {
             type="body-2"
             className="text-typography-secondary font-semibold"
           >
-            test
+            {company}
           </Typography>
         </div>
         <div>
@@ -108,7 +134,7 @@ const ApprenticesCard = () => {
             type="body-2"
             className="text-typography-secondary font-semibold"
           >
-            test
+            {onet}
           </Typography>
         </div>
         <div>
@@ -122,7 +148,7 @@ const ApprenticesCard = () => {
             type="body-2"
             className="text-typography-secondary font-semibold"
           >
-            test
+            {rapids}
           </Typography>
         </div>
       </div>
@@ -130,19 +156,14 @@ const ApprenticesCard = () => {
   );
 };
 
-interface ContactCardProps {
-  type: string;
-  office: string;
-  email: string;
-}
-
-export const ContactCard: React.FC<ContactCardProps> = ({
+export const ContactCard: React.FC<ContactData & { type: string }> = ({
   type,
   office,
   email,
+  name,
 }) => {
   const fields = [
-    { label: type, value: "test" },
+    { label: type, value: name },
     { label: "Office", value: office },
     { label: "Email", value: email },
   ];

@@ -1,15 +1,16 @@
 import { Lengend, Card, StarLabel, PieChartComponent } from "components";
+import { RTIData } from "interfaces";
 
-export const RTISection = () => {
+export const RTISection = ({ data }: { data: RTIData }) => {
   const lengend = [
     {
       description: "Pending",
-      value: 5,
+      value: data.pending,
       color: "#DEDEDE",
     },
     {
       description: "Approved",
-      value: 5,
+      value: data.approved,
       color: "#4E933D",
     },
   ];
@@ -19,17 +20,25 @@ export const RTISection = () => {
         <div className="grid grid-cols-2 gap-1.5">
           <Lengend metricsArray={lengend} />
           <div className="absolute top-7 right-0">
-            <PieChartComponent id="RTI" metricsArray={lengend} total="65.00" />
+            <PieChartComponent
+              id="RTI"
+              metricsArray={lengend}
+              total={data.total}
+            />
           </div>
         </div>
         <div className="flex items-center justify-between gap-x-5 2xl:gap-x-10">
           <StarLabel
-            title="40"
+            title={data.completed_courses.toString()}
             subtitle="Completed Courses"
             starFilled={true}
           />
           <span className="w-[0.5px] h-[33px] bg-gray-80 shrink-0" />
-          <StarLabel title="40" subtitle="Missing Courses" starFilled={false} />
+          <StarLabel
+            title={data.missing_courses.toString()}
+            subtitle="Missing Courses"
+            starFilled={false}
+          />
         </div>
       </div>
     </Card>

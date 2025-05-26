@@ -1,5 +1,5 @@
 import {
-  ApprenticeshipData,
+  DashboardData,
   ApprenticeshipInformation,
   ContactData,
   CourseStatus,
@@ -11,7 +11,9 @@ import {
   WaveProgressionData,
 } from "interfaces";
 
-export const useGetData = (): { data: ApprenticeshipData } => {
+export const useGetData = (): { data: DashboardData } => {
+  const username = "Kayla";
+
   const apprenticeshipInformation: ApprenticeshipInformation = {
     program:
       "Telecommunications Equipment Installers and Repairers, Except Line Installers - Jobs Program 1",
@@ -21,7 +23,7 @@ export const useGetData = (): { data: ApprenticeshipData } => {
   };
 
   const sponsorContactData: ContactData = {
-    sponsor: "Jennifer Johnson",
+    name: "Jennifer Johnson",
     office: "123 W 20 ST Sprout, GS 1234",
     email: "email@gosprout.app",
   };
@@ -46,7 +48,7 @@ export const useGetData = (): { data: ApprenticeshipData } => {
     review: 5,
     pending: 5,
     approved: 5,
-    total: 65,
+    total: "65.00",
     hours_completed: 40,
     hours_missing: 40,
   };
@@ -54,7 +56,7 @@ export const useGetData = (): { data: ApprenticeshipData } => {
   const rtiData: RTIData = {
     pending: 5,
     approved: 5,
-    total: 65,
+    total: "65.00",
     completed_courses: 40,
     missing_courses: 40,
   };
@@ -169,9 +171,22 @@ export const useGetData = (): { data: ApprenticeshipData } => {
       start_date: "12/31/2022",
       end_date: "02/17/2023",
     },
+    {
+      name: "Computer and Information Sciences",
+      section: "Session B",
+      start_date: "12/31/2022",
+      end_date: "02/17/2023",
+    },
+    {
+      name: "Computer and Information Sciences",
+      section: "Session B",
+      start_date: "12/31/2022",
+      end_date: "02/17/2023",
+    },
   ];
 
   const data = {
+    username,
     apprenticeshipInformation,
     competenciesCompletedData,
     courseStatusData,

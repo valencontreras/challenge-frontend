@@ -8,8 +8,10 @@ import {
   Typography,
 } from "components";
 import Icons from "const/icons";
+import { useGetData } from "hooks/useGetData";
 
 export default function Dashboard() {
+  const { data } = useGetData();
   return (
     <div className="relative w-full">
       {/* diagonal background  */}
@@ -26,7 +28,7 @@ export default function Dashboard() {
           <div className="flex justify-between gap-2">
             <div>
               <Typography type="title" className="text-white">
-                Welcome, Kayla
+                Welcome, {data.username}
               </Typography>
               <Typography type="subtitle-1" className="text-white">
                 Track your progress and reach your goal!
@@ -47,17 +49,17 @@ export default function Dashboard() {
                   iconLeft
                 />
               </div>
-              <ApprenticeshipInfoCard />
+              <ApprenticeshipInfoCard data={data} />
             </div>
           </div>
 
           {/* Metrics */}
-          <MetricsSection />
-          <ProgressSection />
+          <MetricsSection data={data} />
+          <ProgressSection data={data} />
         </div>
         <div className="pl-10 2xl:pl-20">
           {/* Course Status */}
-          <CourseStatusSection />
+          <CourseStatusSection data={data.courseStatusData} />
         </div>
       </div>
     </div>

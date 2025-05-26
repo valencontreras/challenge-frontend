@@ -6,7 +6,7 @@ import Logos from "const/logos";
 
 export const Sidebar = () => {
   return (
-    <aside className="h-screen w-[138px] bg-white border border-gray-20 flex flex-col justify-start z-20 pt-12">
+    <aside className="h-screen w-[138px] bg-white border border-gray-20 flex-col justify-start z-20 pt-12 hidden md:flex">
       <button
         type="button"
         className="cursor-pointer  hover:opacity-60 hover:transition-opacity hover:duration-300"

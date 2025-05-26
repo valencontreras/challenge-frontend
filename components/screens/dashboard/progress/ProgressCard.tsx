@@ -1,9 +1,7 @@
-import { DonutChart } from "components/chart";
-import { Icon } from "components/common/icon";
-import { Typography } from "components/common/typography";
+import React from "react";
+import { DonutChart, Icon, Typography } from "components";
 import Icons from "const/icons";
 import { MetricItem } from "interfaces";
-import React from "react";
 
 interface ProgressCardProps {
   data: MetricItem[];

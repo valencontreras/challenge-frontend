@@ -1,13 +1,12 @@
 import { Avatar, Card, Typography } from "components";
-import { useGetData } from "hooks/useGetData";
+import { Journeyworker } from "interfaces";
 
-export const MyJourneyworkers = () => {
-  const { data } = useGetData();
+export const MyJourneyworkers = ({ data }: { data: Journeyworker[] }) => {
   return (
     <Card className="w-[25%]" title="MY JOURNEYWORKERS">
       <div className="max-h-80 overflow-y-scroll pr-1">
         <ul className="flex flex-col">
-          {data.journeyworkesData.map((journeyworker, index) => (
+          {data.map((journeyworker, index) => (
             <li
               key={"journeyworker" + index}
               className="flex gap-4 items-center border-b border-gray-40 pb-6 mb-6"

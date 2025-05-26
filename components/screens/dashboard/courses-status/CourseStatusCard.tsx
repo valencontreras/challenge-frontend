@@ -1,8 +1,9 @@
 import * as React from "react";
 import { Icon, Typography, StatusLabel, Card } from "components";
 import Icons from "const/icons";
+import { CourseStatus } from "interfaces";
 
-export const CourseStatusCard = () => {
+export const CourseStatusCard = ({ data }: { data: CourseStatus }) => {
   return (
     <Card className="min-w-[500px]">
       <div>
@@ -18,7 +19,7 @@ export const CourseStatusCard = () => {
             Course
           </Typography>
           <Typography type="subtitle-3" className="text-primary font-bold">
-            Computer and Information Sciences
+            {data.name}
           </Typography>
         </div>
 
@@ -28,7 +29,7 @@ export const CourseStatusCard = () => {
               Course Session
             </Typography>
             <Typography type="body-2" className="text-primary font-bold">
-              Session B
+              {data.section}
             </Typography>
           </div>
 
@@ -39,11 +40,11 @@ export const CourseStatusCard = () => {
             <div className="flex items-center gap-2">
               <Icon src={Icons.calendar} className="!size-4" />
               <Typography type="body-2" className="text-primary font-bold">
-                12/31/2022
+                {data.start_date}
               </Typography>
               <div className="w-5 h-[1px] bg-gray-60" />
               <Typography type="body-2" className="text-primary font-bold">
-                02/17/2023
+                {data.end_date}
               </Typography>
             </div>
           </div>
