@@ -5,7 +5,7 @@ import { CourseStatus } from "interfaces";
 
 export const CourseStatusCard = ({ data }: { data: CourseStatus }) => {
   return (
-    <Card className="min-w-[500px]">
+    <Card className="lg:min-w-[500px]">
       <div>
         <div className="flex justify-end">
           <StatusLabel
@@ -23,7 +23,7 @@ export const CourseStatusCard = ({ data }: { data: CourseStatus }) => {
           </Typography>
         </div>
 
-        <div className="flex items-center justify-between mt-[30px]">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-2 mt-[30px]">
           <div>
             <Typography type="body-1" className="text-gray-50">
               Course Session

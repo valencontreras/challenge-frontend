@@ -38,11 +38,11 @@ export const ApprenticeshipInfoCard = ({ data }: { data: DashboardData }) => {
     <Card
       title={title[index]}
       onClick={handleNext}
-      className="relative !py-5 cursor-pointer min-w-lg 2xl:min-w-xl max-w-xl h-[235px] shadow-lg transition-all duration-300 ease-in-out"
+      className="relative !py-5 cursor-pointer h-[400px] min-w-full lg:min-w-lg 2xl:min-w-xl lg:max-w-xl lg:h-[235px] shadow-lg transition-all duration-300 ease-in-out"
     >
       <Icon
         src={Icons.card}
-        className="w-[71px] h-[57px] absolute top-3 right-5"
+        className="w-[50px] lg:w-[71px] lg:h-[57px] absolute top-10 lg:top-3 right-5"
       />
       <div
         className={clsx("transition-opacity duration-300", fade && "opacity-0")}
@@ -108,7 +108,7 @@ const ApprenticesCard: React.FC<ApprenticeshipInformation> = ({
           </Typography>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-4 mt-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4">
         <div>
           <Typography
             type="custom-p"
@@ -169,7 +169,7 @@ export const ContactCard: React.FC<ContactData & { type: string }> = ({
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-x-10 gap-y-4">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-4">
       {fields.map(({ label, value }, index) => (
         <div key={index}>
           <Typography

@@ -23,9 +23,9 @@ export default function Dashboard() {
         <polygon points="0,0 100,0 100,100 0,60" fill="#1d1a5e" />
       </svg>
 
-      <div className="relative z-10 pt-[100px]">
-        <div className="px-10 2xl:px-20">
-          <div className="flex justify-between gap-2">
+      <div className="relative z-10 pt-[50px] lg:pt-[100px]">
+        <div className="px-8 lg:px-10 2xl:px-20">
+          <div className="flex flex-col lg:flex-row justify-between gap-2">
             <div>
               <Typography type="title" className="text-white">
                 Welcome, {data.username}
@@ -34,7 +34,7 @@ export default function Dashboard() {
                 Track your progress and reach your goal!
               </Typography>
             </div>
-            <div className="flex items-center gap-10 2xl:gap-20">
+            <div className="flex flex-col lg:flex-row lg:items-center gap-10 2xl:gap-20">
               <div className="flex items-center gap-x-5">
                 <Button
                   decoration="fill"
