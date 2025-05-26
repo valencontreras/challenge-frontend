@@ -1,6 +1,7 @@
 export type MetricItem = {
   description: string;
   value: number;
+  color?: string;
 };
 
 export interface ApprenticeshipInformation {
@@ -39,14 +40,14 @@ export interface RTIData {
   missing_courses: number;
 }
 
-export interface WaveChartPoint {
+export interface ChartPoint {
   x: number;
-  y: number;
+  y: number | string;
 }
 
 export interface WaveProgressionData {
   currentPay: number;
-  chartValues: WaveChartPoint[];
+  chartValues: ChartPoint[];
 }
 
 export interface Journeyworker {

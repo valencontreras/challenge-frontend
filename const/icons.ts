@@ -13,7 +13,7 @@ enum Icons {
   plus = "/icons/svg/plus.svg",
   seedling = "/icons/svg/seedling.svg",
   star = "/icons/svg/star.svg",
-  starFilled = "/icons/svg/starFilled.svg",
+  starFilled = "/icons/svg/star-filled.svg",
   trophy = "/icons/svg/trophy.svg",
 
   // Icons png

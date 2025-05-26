@@ -5,7 +5,7 @@ import Icons from "const/icons";
 export const MetricsSection = () => {
   return (
     <div className="flex flex-col md:flex-row gap-6 mt-[76px] w-full">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-full">
         <CardColors
           backgroundColor="#F28627"
           icon={Icons.seedling}
